@@ -73,8 +73,9 @@ int main()
 					char recv_buffer[512] = {};
 					recv_size = recv(client_socket, recv_buffer, sizeof(recv_buffer) - 1, 0);
 					if (recv_size > 0)
-					{
+					{						
 						// handle data
+						cout << recv_buffer;
 					}
 					else if (recv_size == 0)
 					{
@@ -90,6 +91,5 @@ int main()
 
 		t.detach();
 	}
-
 	return 0;
 }
